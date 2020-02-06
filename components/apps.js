@@ -6,10 +6,10 @@ class App {
 
   }
   handleGetGradeError(error) {
-    console.log(error);
+    // console.log(error);
   }
   handleGetGradeSuccess(grades) {
-    console.log(grades);
+    // console.log(grades);
     this.gradeTable.updateGrades(grades);
 
   }
