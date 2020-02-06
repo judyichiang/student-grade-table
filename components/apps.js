@@ -1,4 +1,4 @@
-class APP {
+class App {
   constructor(gradeTable) {
     this.gradeTable = gradeTable;
     this.handleGetGradeError = this.handleGetGradeError.bind(this);
