@@ -8,11 +8,19 @@ class App {
 
   }
   handleGetGradeError(error) {
-    // console.log(error);
+    // console.log("Error: ",error);
   }
   handleGetGradeSuccess(grades) {
-    // console.log(grades);
+    console.log("Grades: ", grades);
     this.gradeTable.updateGrades(grades);
+
+    var sum = 0;
+    for (var i = 0; i < grades.length; i++) {
+      sum += grades[i].grade;
+    }
+    var average = sum / grades.length;
+    console.log(`Average: ${average}`);
+    this.pageHeader.updateAverage(average);
 
   }
   getGrades() {
