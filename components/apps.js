@@ -1,19 +1,21 @@
 class APP {
-  constructor() {
+  constructor(gradeTable) {
+    this.gradeTable = gradeTable;
     this.handleGetGradeError = this.handleGetGradeError.bind(this);
     this.handleGetGradeSuccess = this.handleGetGradeSuccess.bind(this);
-
 
   }
   handleGetGradeError(error) {
     console.log(error);
   }
   handleGetGradeSuccess(grades) {
-    console.log(grade);
+    console.log(grades);
+    this.gradeTable.updateGrades(grades);
+
   }
   getGrades() {
     $.ajax({
-      method: "Get",
+      // method: "Get",
       url: "http://sgt.lfzprototypes.com/api/grades",
       headers: {
         "X-Access-Token": "cUvco5hF"
@@ -22,6 +24,7 @@ class APP {
       error: this.handleGetGradeError,
     })
   }
+
   start() {
     this.getGrades();
 
