@@ -1,7 +1,9 @@
+var header = document.querySelector("header");
+
 var tbody = document.querySelector("tbody");
 
-const gradeTable = new GradeTable(tbody);
+var gradeTable = new GradeTable(tbody);
+var pageHeader = new PageHeader(header);
 
-const app = new App(gradeTable);
-
+var app = new App(gradeTable, pageHeader);
 app.start();
