@@ -15,6 +15,9 @@ class APP {
     $.ajax({
       method: "Get",
       url: "http://sgt.lfzprototypes.com/api/grades",
+      headers: {
+        "X-Access-Token": "cUvco5hF"
+      },
       success: this.handleGetGradeSuccess,
       error: this.handleGetGradeError,
     })
