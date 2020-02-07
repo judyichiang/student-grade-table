@@ -1,6 +1,7 @@
 class GradeTable {
-  constructor(tableElement) {
+  constructor(tableElement, noGradesElement) {
     this.tableElement = tableElement;
+    this.noGradesElement = noGradesElement;
   }
 
   updateGrades(grades) {
@@ -10,6 +11,9 @@ class GradeTable {
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade);
     }
+
+
+
   }
 
   onDeleteClick(deleteGrade) {
