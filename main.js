@@ -2,7 +2,7 @@ var header = document.querySelector("header");
 
 var tbody = document.querySelector("tbody");
 
-var form = document.querySelector(".form-group")
+var form = document.querySelector("form")
 
 var gradeTable = new GradeTable(tbody);
 var pageHeader = new PageHeader(header);
