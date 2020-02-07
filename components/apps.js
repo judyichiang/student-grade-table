@@ -16,8 +16,9 @@ class App {
     this.handleDeleteGradeSuccess = this.handleDeleteGradeSuccess.bind(this);
   }
   handleGetGradeError(error) {
-    // console.log(`Error: ${error}');
+    // =console.log(`Error: ${error}');
   }
+
   handleGetGradeSuccess(grades) {
     console.log(`Get Grades: ${grades}`);
     this.gradeTable.updateGrades(grades);
@@ -69,12 +70,12 @@ class App {
     this.getGrades();
   }
 
-  delete(id) {
+  deleteGrade(id) {
     console.log(`delete: ${id}`);
   }
 
   handleDeleteGradeError(error) {
-    console.error();
+    console.error(`handleDeleteGradeError: ${error}`);
   }
 
   handleDeleteGradeSuccess() {
