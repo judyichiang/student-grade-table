@@ -40,4 +40,15 @@ class App {
     this.getGrades();
 
   }
+  createGrade(name, course, grade) {
+    console.log(`createdGrade: ${name}, ${course}, ${grade}`);
+  }
+
+  handleCreateGradeError(error) {
+    console.log(`handleCreateGradeError: ${error}`)
+  }
+
+  handleCreateGradeSuccess() {
+    this.getGrades();
+  }
 }
