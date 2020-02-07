@@ -7,5 +7,7 @@ var form = document.querySelector(".form-group")
 var gradeTable = new GradeTable(tbody);
 var pageHeader = new PageHeader(header);
 
+var gradeForm = new GradeForm(form);
+
 var app = new App(gradeTable, pageHeader);
 app.start();
