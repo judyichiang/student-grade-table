@@ -7,6 +7,10 @@ class App {
     this.handleGetGradeError = this.handleGetGradeError.bind(this);
     this.handleGetGradeSuccess = this.handleGetGradeSuccess.bind(this);
 
+    this.createGrade = this.createGrade.bind(this);
+    this.handleCreateGradeError = this.handleCreateGradeError.bind(this);
+    this.handleCreateGradeSuccess = this.handleCreateGradeSuccess.bind(this)
+
   }
   handleGetGradeError(error) {
     // console.log(`Error: ${error}');
