@@ -42,6 +42,9 @@ class GradeTable {
     td1.textContent = data.name;
     td2.textContent = data.course;
     td3.textContent = data.grade;
+
+    deleteButton.textContent = "Delete";
+    deleteButton.setAttribute("class", "btn btn-danger")
     td4.appendChild(deleteButton);
 
     tr.appendChild(td1);
