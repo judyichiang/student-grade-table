@@ -7,9 +7,17 @@ class GradeTable {
   updateGrades(grades) {
     console.log("Update Grades:", grades);
     this.tableElement.textContent = "";
+    var hide = document.querySelector(".d-none")
+
 
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade);
+    }
+    if (grades.length === 0) {
+      hide.setAttribute("class", "d-none");
+
+    } else {
+      hide.setAttribute("class", " ");
     }
 
 
