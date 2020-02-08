@@ -1,7 +1,7 @@
 var header = document.querySelector("header");
 
 var tbody = document.querySelector("tbody");
-var hidden = document.querySelector("p");
+var hidden = document.querySelector(".d-none");
 
 var form = document.querySelector("form")
 
