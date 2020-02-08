@@ -56,6 +56,7 @@ class App {
       error: this.handleCreateGradeError,
     })
   }
+
   handleCreateGradeError(error) {
     console.log(`handleCreateGradeError: ${error}`)
   }
@@ -66,6 +67,16 @@ class App {
 
   deleteGrade(id) {
     console.log(`delete: ${id}`);
+    $.ajax({
+      method: "Delete",
+      url: "http://sgt.lfzprototypes.com/api/grades/" + id,
+      headers: {
+        "X-Access-Token": "cUvco5hF"
+      },
+      success: this.handleDeleteGradeSuccess,
+      error: this.handleDeleteGradeError,
+
+    })
   }
 
   handleDeleteGradeError(error) {

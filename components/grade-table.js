@@ -8,7 +8,8 @@ class GradeTable {
   updateGrades(grades) {
     console.log("Update Grades:", grades);
     this.tableElement.textContent = "";
-    var hide = this.tableElement.querySelector(".d-none")
+    var hide = document.querySelector('p')
+    console.log(`hide: ${hide}`)
 
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade);
