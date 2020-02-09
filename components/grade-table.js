@@ -38,13 +38,16 @@ class GradeTable {
     var td3 = document.createElement("td");
     var td4 = document.createElement("td");
     var deleteButton = document.createElement("button");
+    var editButton = document.createElement("button");
 
     td1.textContent = data.name;
     td2.textContent = data.course;
     td3.textContent = data.grade;
 
-    deleteButton.textContent = "Delete";
-    deleteButton.setAttribute("class", "btn btn-danger")
+    // deleteButton.textContent = "Delete";
+    deleteButton.setAttribute("class", "fas fa-trash")
+    editButton.setAttribute("class", "fas fa-edit")
+
     td4.appendChild(deleteButton);
 
     tr.appendChild(td1);
@@ -53,9 +56,14 @@ class GradeTable {
     tr.appendChild(td4);
     this.tableElement.appendChild(tr);
 
+    editButton.addEventListener("click", function () {
+      console.log("hi")
+    })
+
     deleteButton.addEventListener("click", function () {
       deleteGrade(data.id);
     });
+
 
   }
 }
