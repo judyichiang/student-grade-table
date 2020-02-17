@@ -27,7 +27,8 @@ class App {
     for (var i = 0; i < grades.length; i++) {
       sum += grades[i].grade;
     }
-    var average = sum / grades.length;
+    var avg = sum / grades.length;
+    var average = `${avg.toFixed(2)}%`;
     // console.log(`Average: ${average}`);
     this.pageHeader.updateAverage(average);
 
